@@ -19,10 +19,11 @@ print("How many people to split the bill?")
 num_people = input(" ")
 
 # Calculate the bill amount per person
-bill_per_person = (float(total_bill) + (float(total_bill) * float(tip_percentage) / 100)) / float(num_people)
-
+bill_per_person = (float(total_bill) + (float(total_bill) * float(tip_percentage) / 100)) / int(num_people)
+final_amount = round(bill_per_person, 2)
+final_amount = "{:.2f}".format(final_amount)
 # Print the bill amount per person
-print("Each person should pay: Rs. " + str(round(bill_per_person, 2)))
+print(f"Each person should pay: Rs. {final_amount}")
 
 # Clear the screen
 print("\n\n\nDo you want to clear the screen?")
